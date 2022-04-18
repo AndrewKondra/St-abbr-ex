@@ -1,5 +1,13 @@
-document.getElementById("stateSearch").addEventListener("click", stAbbr);
-function stAbbr () {
+function getStateAbbr(){
+    let stName = document.getElementById("stateName").value;
+    console.log(stName);
+    //document.getElementById("stateSearch").addEventListener("click", stAbbr);
+    //let abbr = (stateList[stName]);
+    let abbr = stAbbr(stName);
+    document.getElementById("abbr").innerText = abbr;
+};
+
+function stAbbr (stName) {
     var stateList = 
     {
         "Alabama": "AL",
@@ -54,9 +62,7 @@ function stAbbr () {
         "Wisconsin": "WI",
         "Wyoming": "WY" 
     };
-    let stName = document.getElementById("stateName").value;
-    let abbr = (stateList[stName]);
-    console.log(abbr);
-    document.getElementById("abbr").innerText = abbr;
+    console.log (stateList[stName]);
+    return (stateList[stName]);
 };
- 
+
